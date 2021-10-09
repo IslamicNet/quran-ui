@@ -4,7 +4,7 @@ const Layout = ({ children }) => {
   return (
     <div>
       <TopBar />
-      {children}
+      <main style={{ padding: 24 }}>{children}</main>
     </div>
   );
 };

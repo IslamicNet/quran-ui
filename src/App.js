@@ -1,8 +1,8 @@
 import React from "react";
 import { Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
-import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import CssBaseline from "@material-ui/core/CssBaseline";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
 
 import Routes from "./Routes";
 
@@ -13,11 +13,14 @@ const App = () => {
 
   const theme = React.useMemo(
     () =>
-      createMuiTheme({
+      createTheme({
         palette: {
-          type: isDarkMode ? "dark" : "light",
-          common: {
-            blue: "blue",
+          mode: isDarkMode ? "dark" : "light",
+          primary: {
+            main: "#27acc2",
+          },
+          text: {
+            secondary: "#27acc2",
           },
         },
       }),

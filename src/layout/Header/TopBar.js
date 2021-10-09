@@ -1,35 +1,27 @@
-import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
-}));
+// Other Imports
+import ToggleDarkMode from "./Components/ToggleDarkMode";
 
 const TopBar = () => {
-  const classes = useStyles();
-
   return (
-    <div className={classes.root}>
-      <AppBar position="static" color="transparent">
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" color="transparent" sx={{ boxShadow: 1 }}>
         <Toolbar variant="dense">
-          <Typography variant="h6" className={classes.title}>
-            Quran
+          <Typography
+            variant="h5"
+            component="div"
+            sx={{ flexGrow: 1, color: "text.secondary" }}
+          >
+            <strong>Quran</strong>
           </Typography>
-          <Button color="inherit">Login</Button>
+          <ToggleDarkMode />
         </Toolbar>
       </AppBar>
-    </div>
+    </Box>
   );
 };
 
