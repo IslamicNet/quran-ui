@@ -19,6 +19,7 @@ const App = () => {
           mode: darkMode ? "dark" : "light",
           primary: {
             main: "#27acc2",
+            light: "#cdecf1",
           },
           text: {
             secondary: "#27acc2",
