@@ -2,6 +2,7 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
 
 import LanguageSelector from "./Components/LanguageSelector";
 import ToggleDarkMode from "./Components/ToggleDarkMode";
@@ -19,6 +20,7 @@ const Header = () => {
             <strong>Quran</strong>
           </Typography>
           <LanguageSelector />
+          <Divider orientation="vertical" variant="middle" flexItem />
           <ToggleDarkMode />
         </Toolbar>
       </AppBar>

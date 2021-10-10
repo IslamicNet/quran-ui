@@ -15,7 +15,7 @@ const ToggleDarkMode = () => {
 
   return (
     <Tooltip title="Toggle Dark Mode">
-      <IconButton onClick={handleThemeChange}>
+      <IconButton sx={{ ml: 2 }} onClick={handleThemeChange}>
         <DarkModeIcon />
       </IconButton>
     </Tooltip>
