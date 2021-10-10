@@ -3,9 +3,10 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 
+import LanguageSelector from "./Components/LanguageSelector";
 import ToggleDarkMode from "./Components/ToggleDarkMode";
 
-const TopBar = () => {
+const Header = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" color="transparent" sx={{ boxShadow: 1 }}>
@@ -17,6 +18,7 @@ const TopBar = () => {
           >
             <strong>Quran</strong>
           </Typography>
+          <LanguageSelector />
           <ToggleDarkMode />
         </Toolbar>
       </AppBar>
@@ -24,4 +26,4 @@ const TopBar = () => {
   );
 };
 
-export default TopBar;
+export default Header;

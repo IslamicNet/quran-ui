@@ -1,9 +1,9 @@
-import TopBar from "./Header/TopBar";
+import Header from "./Header/Header";
 
 const Layout = ({ children }) => {
   return (
     <div>
-      <TopBar />
+      <Header />
       <main style={{ padding: 24 }}>{children}</main>
     </div>
   );
