@@ -4,7 +4,11 @@ const ArabicFont = (props) => {
   const { children, sx, ...rest } = props;
   return (
     <Typography
-      sx={{ fontFamily: "'Scheherazade New', serif", fontSize: "2rem", ...sx }}
+      sx={{
+        fontFamily: "'PDMS_Saleem_QuranFont', serif",
+        fontSize: "2rem",
+        ...sx,
+      }}
       {...rest}
     >
       {children}

@@ -12,9 +12,7 @@ const SurahItem = ({ surah }) => {
         avatar={<Avatar>{surah.number}</Avatar>}
         title={surah.name}
         subheader={surah.englishName}
-        action={
-          <ArabicFont sx={{ fontWeight: "bold" }}>{surah.arabic}</ArabicFont>
-        }
+        action={<ArabicFont>{surah.arabic}</ArabicFont>}
       />
     </Card>
   );
