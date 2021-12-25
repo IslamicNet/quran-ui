@@ -1,36 +1,27 @@
 import PropTypes from "prop-types";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
-import CardActionArea from "@mui/material/CardActionArea";
 import Avatar from "@mui/material/Avatar";
-
-import { useHistory } from "react-router-dom";
 
 import Typography from "common/Typography";
 
-const SurahItem = ({ surah }) => {
-  const history = useHistory();
-
-  const openSurah = (surahNumber) => {
-    history.push(`/surah/${surahNumber}?page=1`);
-  };
-
+const SurahInfo = ({ surah }) => {
   return (
-    <Card>
-      <CardActionArea onClick={() => openSurah(surah.number)}>
+    <div>
+      <Card>
         <CardHeader
           avatar={<Avatar>{surah.number}</Avatar>}
           title={surah.name}
           subheader={surah.englishName}
           action={<Typography font="arabic">{surah.arabic}</Typography>}
         />
-      </CardActionArea>
-    </Card>
+      </Card>
+    </div>
   );
 };
 
-SurahItem.propTypes = {
+SurahInfo.propTypes = {
   surah: PropTypes.object.isRequired,
 };
 
-export default SurahItem;
+export default SurahInfo;
