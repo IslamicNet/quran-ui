@@ -8,7 +8,7 @@ import Typography from "common/Typography";
 const SurahInfo = ({ surah }) => {
   return (
     <div>
-      <Card>
+      <Card sx={{ maxWidth: "50%", margin: "auto" }}>
         <CardHeader
           avatar={<Avatar>{surah.number}</Avatar>}
           title={surah.name}
