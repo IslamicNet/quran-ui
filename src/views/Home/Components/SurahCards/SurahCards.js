@@ -1,29 +1,17 @@
 import Grid from "@mui/material/Grid";
+import { useGetSurahListQuery } from "store/quran.service";
 
 import SurahItem from "./SurahItem";
 
-const surahs = [
-  {
-    number: 1,
-    name: "Al-Fatihah",
-    englishName: "The Opener",
-    arabic: "عَلَّمَ الْقُرْآنَ",
-  },
-  {
-    number: 2,
-    name: "Al-Fatihah",
-    englishName: "The Opener",
-    arabic: "خَلَقَ الْإِنْسَانَ",
-  },
-  {
-    number: 3,
-    name: "Al-Fatihah",
-    englishName: "The Opener",
-    arabic: "سورة الفاتحة",
-  },
-];
-
 const SurahCards = () => {
+  const { data: surahs, isLoading, error } = useGetSurahListQuery();
+
+  if (isLoading) return null;
+  if (error) {
+    console.log(error);
+    return null;
+  }
+
   return (
     <Grid container spacing={3} sx={{ mt: 3 }}>
       {surahs.map((surah) => (

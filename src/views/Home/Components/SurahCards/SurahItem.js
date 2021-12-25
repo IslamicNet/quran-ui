@@ -1,30 +1,29 @@
 import PropTypes from "prop-types";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
+import CardActionArea from "@mui/material/CardActionArea";
 import Avatar from "@mui/material/Avatar";
 
-import ArabicFont from "common/ArabicFont";
+import Typography from "common/Typography";
 
 const SurahItem = ({ surah }) => {
   return (
     <Card>
-      <CardHeader
-        avatar={<Avatar>{surah.number}</Avatar>}
-        title={surah.name}
-        subheader={surah.englishName}
-        action={<ArabicFont>{surah.arabic}</ArabicFont>}
-      />
+      <CardActionArea onClick={() => console.log("clicked")}>
+        <CardHeader
+          avatar={<Avatar>{surah.number}</Avatar>}
+          title={surah.name}
+          subheader={surah.englishName}
+          action={<Typography font="arabic">{surah.arabic}</Typography>}
+          onClick={() => console.log("clicked 2")}
+        />
+      </CardActionArea>
     </Card>
   );
 };
 
 SurahItem.propTypes = {
-  surah: PropTypes.objectOf({
-    number: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    englishName: PropTypes.string.isRequired,
-    arabic: PropTypes.string.isRequired,
-  }).isRequired,
+  surah: PropTypes.object.isRequired,
 };
 
 export default SurahItem;
