@@ -20,8 +20,6 @@ const Surah = ({ match }) => {
     return "error";
   }
 
-  console.log(data);
-
   return (
     <div>
       <SurahInfo surah={data.surah} />

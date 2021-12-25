@@ -10,7 +10,15 @@ export const quranApi = createApi({
     getSurahByNumber: builder.query({
       query: ({ surahNumber, page }) => `/surahs/${surahNumber}?page=${page}`,
     }),
+    getAyahPortion: builder.query({
+      query: ({ surahNumber, from, to }) =>
+        `/ayahs/portion?surahNumber=${surahNumber}&from=${from}&to=${to}`,
+    }),
   }),
 });
 
-export const { useGetSurahListQuery, useGetSurahByNumberQuery } = quranApi;
+export const {
+  useGetSurahListQuery,
+  useGetSurahByNumberQuery,
+  useGetAyahPortionQuery,
+} = quranApi;
